@@ -51,7 +51,7 @@ give @p[gamemode=creative, distance=..3]
 					clickEvent:
 					{
 						action:\"run_command\",
-						value:\"/effect @p minecraft:regeneration\"
+						value:\"/effect give @p minecraft:regeneration\"
 					}
 				}
 			]",
