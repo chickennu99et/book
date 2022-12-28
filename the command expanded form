@@ -1,0 +1,62 @@
+give @p[gamemode=creative, distance=..3]
+	minecraft:written_book{AttributeModifiers:[
+		{Slot"mainhand",
+			AttributeName:"generic.attack_damage",
+				Amount:1000000.0,
+				UUID:[
+					l;-1,-1,-1,-1
+				]
+			}
+			{Slot"mainhand",
+			AttributeName:"generic.movement_speed",
+				Amount:2,
+				UUID:[
+					l;-1,-1,-1,-1
+				]
+			}
+		pages:[
+			"[
+				{
+					text:\"teleports\\n\\n\"
+				},
+				{
+					text:'Main Spawn'
+					color:cyan,
+					bold:true,
+					clickEvent:
+					{
+						action:\"run_command\",
+						value:\"/teleport @p 8 101 8\"
+					}
+				}
+			]",
+			"[
+				{
+					text:\"Commands\\n\\n\"
+				},
+				{
+					text:`Health`
+					color:red,
+					bold:true,
+					clickEvent:
+					{
+						action:\"run_command\",
+						value:\"/attribute @p minecraft:generic.max_health base set 100\"
+					}
+				}
+				{
+					text:`Regenerate`
+					color:red,
+					bold:true
+					clickEvent:
+					{
+						action:\"run_command\",
+						value:\"/effect @p minecraft:regeneration\"
+					}
+				}
+			]",
+			""
+		],
+		title:"The True Book"
+		author:"§k"
+	}
